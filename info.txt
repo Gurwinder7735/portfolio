@@ -1,0 +1,31 @@
+STEP: 1
+//generate config file
+sequelize-cli init
+
+//create database if not exists
+sequelize-cli db:create
+
+STEP: 2
+//Generating model 
+sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+STEP: 3
+// migrating 
+sequelize-cli db:migrate
+
+// Undoing migration
+ sequelize-cli db:migrate:undo
+
+ STEP: 4
+ //seeding adding dummmy data to tables
+ sequelize-cli seed:generate --name demo-user
+ sequelize-cli db:seed:all
+
+GERNERATING MIGRATION SKELTON: 
+sequelize-cli migration:generate --name migration-skeleton
+
+
+
+// USING SEQUELIZE AUTO
+sequelize-auto -h localhost -d database_development -u root -x  -p 3306  --dialect mysql2 -c "./config/config.js" -o "./models/" -t user
+
