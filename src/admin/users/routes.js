@@ -7,6 +7,7 @@ const validator = require('express-joi-validation').createValidator({ passError:
 // console.log(validator)
 router.post('/users',[validator.body(validators.changePassword.body)], controller.getUser);
 router.post('/user/login',[validator.body(validators.login.body)], controller.login);
+router.post('/user/register',[validator.body(validators.register.body)], controller.register);
 router.post('/user/protected',[authenticateAdmin], controller.protected);
 
 
