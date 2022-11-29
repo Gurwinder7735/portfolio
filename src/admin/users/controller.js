@@ -53,11 +53,11 @@ module.exports = {
                 name : req.body.name,
                 email: req.body.email,
                 phoneNumber: req.body.phoneNumber,
-                description: req.body.description,
+                // description: req.body.description,
                 password: req.body.password,
-                address: req.body.address,
-                deviceType: req.body.deviceType,
-                deviceToken: req.body.deviceToken
+                // address: req.body.address,
+                // deviceType: req.body.deviceType,
+                // deviceToken: req.body.deviceToken
             })
 
             user = user.toJSON()

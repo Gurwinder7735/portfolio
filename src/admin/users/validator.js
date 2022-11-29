@@ -22,11 +22,11 @@ validator.register = {
         name : Joi.string().required(),
         email: Joi.string().required(),
         phoneNumber: Joi.string().required(),
-        description: Joi.string().required(),
+        // description: Joi.string().required(),
         password: Joi.string().required(),
-        address: Joi.string().required(),
-        deviceToken: Joi.string().required(),
-        deviceType: Joi.string().required()
+        // address: Joi.string().required(),
+        // deviceToken: Joi.string().required(),
+        // deviceType: Joi.string().required()
         // password: Joi.string().required(),
     })
 };
