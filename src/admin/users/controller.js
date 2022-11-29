@@ -16,7 +16,7 @@ module.exports = {
     login: catchAsync(async(req,res,next) => {        
    
 
-            const user = await db.Users.findOne({
+            let user = await db.Users.findOne({
            
                     email: req.body.email,
                     password : req.body.password
@@ -49,7 +49,7 @@ module.exports = {
             //     },
             //     raw: true
             // });
-            const user = await db.Users.create({
+            let user = await db.Users.create({
                 name : req.body.name,
                 email: req.body.email,
                 phoneNumber: req.body.phoneNumber,
