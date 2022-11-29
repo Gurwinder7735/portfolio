@@ -31,6 +31,7 @@ module.exports = {
                 return sendSuccess(req,res, 400, STATUS_MSG.ERROR.LOGIN_FAILED,{})
             }
 
+            user = user.toJSON()
             user.token =  jwt.sign({ id: user.id },process.env.JWT_SECRET_KEY);
 
            return sendSuccess(req,res, 200, STATUS_MSG.SUCCESS.LOGIN_SUCCESS, {user})
@@ -59,6 +60,7 @@ module.exports = {
                 deviceToken: req.body.deviceToken
             })
 
+            user = user.toJSON()
             user.token =  jwt.sign({ id: user.id },process.env.JWT_SECRET_KEY);
 
 
